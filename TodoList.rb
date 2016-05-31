@@ -7,5 +7,5 @@ get '/' do
 tasks << params["todo"]
 end
 @tasks = tasks
-haml :TODO_Web
+haml :index
 end
