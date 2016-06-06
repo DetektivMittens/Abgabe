@@ -1,10 +1,8 @@
 %body
 %h1 Todos
 %ul{:style=> "list-style-type:circle"}
-  %li Punkt 1
-  %li Punkt 2
-  %= @tasks.each do |task|
-  %= task
+  - @tasks.each do |task|
+    %li= task
 
 
 
