@@ -1,15 +1,13 @@
 %body
 %h1 Todos
 %ul{:style=> "list-style-type:circle"}
-  %li Punkt 1
-  %li Punkt 2
-  %= @tasks.each do |task|
-  %= task
+  - @tasks.each do |task|
+    %li= task
 
 
 
 %h2 New to do
 
 %form{:action=> "/" , :method=> "get"}
-%input{:type=> "Text",  :name=> "Todo", :style=> "width: 50px"}
-%input{:type=>"Submit", :value=>"Submit"}
+  %input{:type=> "Text",  :name=> "todo", :style=> "width: 50px"}
+  %input{:type=>"Submit", :value=>"Submit"}
