@@ -7,5 +7,6 @@ get '/' do
 tasks << params["todo"]
 end
 @tasks = tasks
+
 haml :index
 end

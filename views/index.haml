@@ -1,8 +1,12 @@
 %body
-%h1 Todos
-%ul{:style=> "list-style-type:circle"}
-  - @tasks.each do |task|
-    %li= task
+
+%form{:action => "#"}
+  %h1 Todos
+  %fieldset
+    %ul
+    - @tasks.each do |task|
+      %li= task
+      %input{:name => "todo", :type => "checkbox", :value => "Submit"}Done
 
 
 
@@ -10,13 +14,4 @@
 
 %form{:action=> "/" , :method=> "get"}
   %input{:type=> "Text",  :name=> "todo", :style=> "width: 50px"}
-  %input{:type=>"Submit", :value=>"Submit"}
-
-%h3 ToDos Done
-
-%ul{:style=> "list-style-type:circle"}
-    %li= finished
-
-%form{:action=> "/" , :method=> "get"}
-  %input{:type=> "Text",  :name=> "done", :style=> "width: 50px"}
   %input{:type=>"Submit", :value=>"Submit"}
