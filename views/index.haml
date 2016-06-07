@@ -11,3 +11,12 @@
 %form{:action=> "/" , :method=> "get"}
   %input{:type=> "Text",  :name=> "todo", :style=> "width: 50px"}
   %input{:type=>"Submit", :value=>"Submit"}
+
+%h3 ToDos Done
+
+%ul{:style=> "list-style-type:circle"}
+    %li= finished
+
+%form{:action=> "/" , :method=> "get"}
+  %input{:type=> "Text",  :name=> "done", :style=> "width: 50px"}
+  %input{:type=>"Submit", :value=>"Submit"}
