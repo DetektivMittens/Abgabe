@@ -7,10 +7,13 @@
     = task
     %form{:action=>"/finish", :method=>"post"}
       %input{:type=>"hidden", :name=>"todo", :value => task}
-      %input{:type=>"submit", :value=>"Done!"}
+      %input{:type=>"submit", :value=>"DONE!"}
+
+/h1 Finished Todos
+/ul
 
 %h2 New to do
 
 %form{:action=> "/new" , :method=> "post"}
-  %input{:type=> "Text",  :name=> "todo", :style=> "width: 50px"}
+  %input{:type=> "Text", :name=> "todo", :style=> "width: 50px"}
   %input{:type=>"Submit", :value=>"Submit"}

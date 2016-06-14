@@ -18,7 +18,9 @@ post "/new" do
 end
 
 post "/finish" do
-  params["todo"]
-  # TODO: do something with the finished todo
-  # TODO: redirect to the root page
+  puts "Finish params:"
+  puts params["todo"]
+  tasks.delete params["todo"]
+  puts params
+  redirect to("/")
 end
