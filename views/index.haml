@@ -1,17 +1,16 @@
 %body
 
-%form{:action => "#"}
-  %h1 Todos
-  %fieldset
-    %ul
-    - @tasks.each do |task|
-      %li= task
-      %input{:name => "todo", :type => "checkbox", :value => "Submit"}Done
-
-
+%h1 Todos
+%ul
+- @tasks.each do |task|
+  %li
+    = task
+    %form{:action=>"/finish", :method=>"post"}
+      %input{:type=>"hidden", :name=>"todo", :value => task}
+      %input{:type=>"submit", :value=>"Done!"}
 
 %h2 New to do
 
-%form{:action=> "/" , :method=> "get"}
+%form{:action=> "/new" , :method=> "post"}
   %input{:type=> "Text",  :name=> "todo", :style=> "width: 50px"}
   %input{:type=>"Submit", :value=>"Submit"}
