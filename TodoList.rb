@@ -21,7 +21,6 @@ post "/new" do
 end
 
 post "/finish" do
-  finished_tasks << params["todo"]
-  tasks.delete params["todo"]
+  finished_tasks << tasks.delete(params["todo"])
   redirect to("/")
 end
