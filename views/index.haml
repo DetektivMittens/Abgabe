@@ -9,9 +9,11 @@
       %input{:type=>"hidden", :name=>"todo", :value => task}
       %input{:type=>"submit", :value=>"DONE!"}
 
+-# The heading should be "Finished Todos", shouldn't it?
 %h1 Todos
 %ul
 - @finished_tasks.each do |task|
+  -# Style the title of a finished task so it looks 'striked through'
   %li= task
 
 %h2 New to do

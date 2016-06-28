@@ -1,9 +1,10 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
+
 tasks = []
 finished_tasks = []
+
 get '/' do
-  puts params
   @tasks = tasks
   @finished_tasks = finished_tasks
 
@@ -20,10 +21,9 @@ post "/new" do
 end
 
 post "/finish" do
-  puts "Finish params:"
-  puts params["todo"]
-  finished_tasks << params["todo"]
-  tasks.delete params["todo"]
-  puts params
+  finished_tasks << tasks.delete(params["todo"])
   redirect to("/")
 end
+
+# TODO: create a route /clear_finished, to delete all finished todos
+# inspired by @veracl ;)
