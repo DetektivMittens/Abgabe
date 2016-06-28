@@ -23,5 +23,6 @@
   %input{:type=> "Text", :name=> "todo", :style=> "width: 50px"}
   %input{:type=>"Submit", :value=>"Submit"}
 
-%button{:action=>"/delete" , :method=> "post", :style=>"width: 60px", :style=>"height: 30px"}
-  CLEAR
+%form{:action=>"/delete", :method=> "post"}
+  %input{:type=>"Submit", :value=>"HURRA"}
+  
