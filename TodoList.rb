@@ -25,5 +25,10 @@ post "/finish" do
   redirect to("/")
 end
 
+post "/delete" do
+  finished_tasks.clear
+  redirect to("/")
+end
+
 # TODO: create a route /clear_finished, to delete all finished todos
 # inspired by @veracl ;)
