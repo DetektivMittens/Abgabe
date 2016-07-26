@@ -10,14 +10,35 @@
   %input{:type=>"hidden",  :value=>"result"}
 = @result
 
-.keys
-%span 1
-%span 2
-%span 3
-%span 4
-%span 5
-%span 6
-%span 7
-%span 8
-%span 9
-%span 0
+%form{:action=>"/eins", :method=>"post"}
+  %input{:type=>"submit", :value=>"1"}
+
+%form{:action=>"/zwei", :method=>"post"}
+  %input{:type=>"submit", :value=>"2"}
+
+%form{:action=>"/drei", :method=>"post"}
+  %input{:type=>"submit", :value=>"3"}
+
+%form{:action=>"/vier", :method=>"post"}
+  %input{:type=>"submit", :value=>"4"}
+
+%form{:action=>"/fünf", :method=>"post"}
+  %input{:type=>"submit", :value=>"5"}
+
+%form{:action=>"/sechs", :method=>"post"}
+  %input{:type=>"submit", :value=>"6"}
+
+%form{:action=>"/sieben", :method=>"post"}
+  %input{:type=>"submit", :value=>"7"}
+
+%form{:action=>"/acht", :method=>"post"}
+  %input{:type=>"submit", :value=>"8"}
+
+%form{:action=>"/neun", :method=>"post"}
+  %input{:type=>"submit", :value=>"9"}
+
+%form{:action=>"/zehn", :method=>"post"}
+  %input{:type=>"submit", :value=>"10"}
+
+%form{:action=>"/null", :method=>"post"}
+  %input{:type=>"submit", :value=>"0"}
